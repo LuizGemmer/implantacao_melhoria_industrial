@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0">
+    <businessObjects>
+        <businessObject qualifiedName="com.company.model.BusinessObject">
+            <fields>
+                <field type="STRING" length="255" name="attribute" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Melhoria">
+            <fields>
+                <field type="STRING" length="255" name="oQueFazer" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="comoFazer" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="ondeFazer" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="comentarioGestor" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="aprovacaoGestor" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="comentarioEngenharia" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="aprovacaoEngenharia" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="ordemServicoRequisitos" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="requisitos" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="analiseViabilidade" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="aprovacaoViabilidade" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="linkDocumentoFormalizado" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="ordemServicoExecucao" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="analiseGanhos" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="ganhosAnuaisComMelhoria" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="ganhosAprovados" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>

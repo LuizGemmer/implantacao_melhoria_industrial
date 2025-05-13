@@ -97,6 +97,11 @@
       <artifactId>bonita-actorfilter-initiator-manager</artifactId>
       <version>1.0.0</version>
     </dependency>
+    <dependency>
+      <groupId>org.bonitasoft.actorfilter</groupId>
+      <artifactId>bonita-actorfilter-user-manager</artifactId>
+      <version>1.0.0</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>

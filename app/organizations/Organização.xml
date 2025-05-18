@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="ASCII"?>
+<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1">
+  <customUserInfoDefinitions/>
+  <users>
+    <user userName="Colaborador">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">1234</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="Gestor">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">1234</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="Engenharia">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">1234</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="PCM">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">1234</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="Manutencao">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">1234</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="admin">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">1234</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="walter.bates">
+      <firstName>Walter</firstName>
+      <lastName>Bates</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+  </users>
+  <roles>
+    <role name="User">
+      <displayName>User</displayName>
+    </role>
+    <role name="Admin">
+      <displayName>Admin</displayName>
+    </role>
+  </roles>
+  <groups>
+    <group name="Colaborador">
+      <displayName>Colaborador</displayName>
+    </group>
+    <group name="Gestor">
+      <displayName>Gestor</displayName>
+    </group>
+    <group name="Engenharia">
+      <displayName>Engenharia</displayName>
+    </group>
+    <group name="Manutencao">
+      <displayName>Manutencao</displayName>
+    </group>
+    <group name="PCM">
+      <displayName>PCM</displayName>
+    </group>
+  </groups>
+  <memberships>
+    <membership>
+      <userName>Colaborador</userName>
+      <roleName>User</roleName>
+      <groupName>Colaborador</groupName>
+    </membership>
+    <membership>
+      <userName>Gestor</userName>
+      <roleName>User</roleName>
+      <groupName>Gestor</groupName>
+    </membership>
+    <membership>
+      <userName>Engenharia</userName>
+      <roleName>User</roleName>
+      <groupName>Engenharia</groupName>
+    </membership>
+    <membership>
+      <userName>PCM</userName>
+      <roleName>User</roleName>
+      <groupName>PCM</groupName>
+    </membership>
+    <membership>
+      <userName>Manutencao</userName>
+      <roleName>User</roleName>
+      <groupName>Manutencao</groupName>
+    </membership>
+    <membership>
+      <userName>admin</userName>
+      <roleName>Admin</roleName>
+      <groupName>Colaborador</groupName>
+    </membership>
+    <membership>
+      <userName>admin</userName>
+      <roleName>Admin</roleName>
+      <groupName>Gestor</groupName>
+    </membership>
+    <membership>
+      <userName>admin</userName>
+      <roleName>Admin</roleName>
+      <groupName>Manutencao</groupName>
+    </membership>
+    <membership>
+      <userName>admin</userName>
+      <roleName>Admin</roleName>
+      <groupName>Engenharia</groupName>
+    </membership>
+    <membership>
+      <userName>admin</userName>
+      <roleName>Admin</roleName>
+      <groupName>PCM</groupName>
+    </membership>
+    <membership>
+      <userName>walter.bates</userName>
+      <roleName>Admin</roleName>
+      <groupName>Colaborador</groupName>
+    </membership>
+    <membership>
+      <userName>walter.bates</userName>
+      <roleName>Admin</roleName>
+      <groupName>Gestor</groupName>
+    </membership>
+    <membership>
+      <userName>walter.bates</userName>
+      <roleName>Admin</roleName>
+      <groupName>Engenharia</groupName>
+    </membership>
+    <membership>
+      <userName>walter.bates</userName>
+      <roleName>Admin</roleName>
+      <groupName>Manutencao</groupName>
+    </membership>
+    <membership>
+      <userName>walter.bates</userName>
+      <roleName>Admin</roleName>
+      <groupName>PCM</groupName>
+    </membership>
+  </memberships>
+</organization:Organization>

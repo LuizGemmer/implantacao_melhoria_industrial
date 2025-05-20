@@ -1,10 +1,10 @@
 {
-  "id" : "GerarOrdemServicoForm",
-  "name" : "GerarOrdemServicoForm",
+  "id" : "AvaliacaoRequisitosForm",
+  "name" : "AvaliacaoRequisitosForm",
   "type" : "form",
-  "uuid" : "93a509fd-835a-4bb1-9b3a-99a5b2787436",
+  "uuid" : "187a10bb-b802-4e13-b8bf-876af39f9aa4",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1747704860220,
+  "lastUpdate" : 1747704972834,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -14,7 +14,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "46a502a2-dc5f-444c-a924-3e96e010d482",
+        "reference" : "793d046d-4b78-4d7f-9988-3f36dc405a39",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -42,7 +42,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "Gerar Ordem de Serviço"
+                  "value" : "Avaliar Requisitos"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -57,57 +57,9 @@
                   "value" : false
                 }
               },
-              "reference" : "3fae87bf-9686-45a1-a73d-dd700ff8cf9a",
+              "reference" : "2226761e-8e5d-4bf3-8071-0b8ea96f7048",
               "hasValidationError" : false,
               "id" : "pbTitle",
-              "description" : ""
-            }
-          ],
-          [
-            {
-              "type" : "component",
-              "dimension" : {
-                "md" : 12,
-                "sm" : 12,
-                "xs" : 12,
-                "lg" : 12
-              },
-              "propertyValues" : {
-                "allowHtml" : {
-                  "type" : "constant",
-                  "value" : true
-                },
-                "labelHidden" : {
-                  "type" : "constant",
-                  "value" : true
-                },
-                "hidden" : {
-                  "type" : "constant",
-                  "value" : false
-                },
-                "cssClasses" : {
-                  "type" : "constant",
-                  "value" : ""
-                },
-                "label" : {
-                  "type" : "interpolation"
-                },
-                "text" : {
-                  "type" : "interpolation",
-                  "value" : "{{ task.displayDescription }}"
-                },
-                "alignment" : {
-                  "type" : "constant",
-                  "value" : "left"
-                },
-                "dimension" : {
-                  "type" : "constant",
-                  "value" : 12
-                }
-              },
-              "reference" : "af53541b-ad98-495a-b608-31c833739221",
-              "hasValidationError" : false,
-              "id" : "pbText",
               "description" : ""
             }
           ]
@@ -121,7 +73,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "98877adc-43d0-4c4b-b155-0610809879f3",
+        "reference" : "1236ea87-779e-434e-951f-53abeb1a2e5c",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -130,7 +82,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "1cf83135-d311-4957-a32e-9ccdcb6ada31",
+          "reference" : "c24c3e2f-6f8e-46f4-b1fb-450e8b6b1d20",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -158,7 +110,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Ordem"
+                    "value" : "Melhoria"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -167,13 +119,9 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
-                  },
-                  "allowHTML" : {
-                    "type" : "constant",
-                    "value" : false
                   }
                 },
-                "reference" : "61c808cb-ab41-441c-81a1-2775f6ef274a",
+                "reference" : "ab25928d-6198-4060-8b7d-3a1d336e8074",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -205,7 +153,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "2347cae3-e2a4-43f1-88b7-dbffb3b6b825",
+                "reference" : "ecd6aed3-6dd3-4ee2-a6fe-aa7a989756ef",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -293,7 +241,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "005675f7-2a80-45b3-ac3c-b98e0226d829",
+                      "reference" : "63a12339-6a38-4744-ab3a-42398860fe8d",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -383,7 +331,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "24a77cd3-0e42-491a-9c7f-33014e250e5e",
+                      "reference" : "e8a70803-296c-48f6-af12-b8788b02e200",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -473,7 +421,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "ec60dbe8-8625-4c00-8123-e7ea251a4039",
+                      "reference" : "7feeae9b-1872-421d-a34f-0294f22ab77d",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -563,7 +511,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "e9c3c92d-da5a-415f-902e-14a22e611415",
+                      "reference" : "6d3f3332-534e-4e32-b357-7ec1094a8a94",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -653,7 +601,7 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "8fa12fcc-30c9-4d82-bd46-bc38bc3fe7d6",
+                      "reference" : "26fc7619-fcd8-4509-822c-f0bcce210c48",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -706,7 +654,7 @@
                           "value" : false
                         }
                       },
-                      "reference" : "57d653a5-f7ca-41b3-b312-538ffc7ca383",
+                      "reference" : "85d15552-e285-4096-896a-58dfb64d4fa6",
                       "hasValidationError" : false,
                       "id" : "pbCheckbox",
                       "description" : ""
@@ -744,11 +692,154 @@
                         },
                         "readOnly" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Ordem Servico Requisitos (Código)"
+                          "value" : "Comentario Engenharia"
+                        },
+                        "placeholder" : {
+                          "type" : "constant"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "text"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "melhoria.comentarioEngenharia"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "debounce" : {
+                          "type" : "constant",
+                          "value" : 0
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
+                        }
+                      },
+                      "reference" : "fce4cb96-720a-49f8-a13d-7c5c4f557581",
+                      "hasValidationError" : false,
+                      "id" : "pbInput",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "disabled" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Aprovacao Engenharia"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "melhoria.aprovacaoEngenharia"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        }
+                      },
+                      "reference" : "3ef2ea12-2d23-4343-9609-d455a3edd747",
+                      "hasValidationError" : false,
+                      "id" : "pbCheckbox",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Ordem Servico Requisitos"
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -796,7 +887,71 @@
                           "value" : 1
                         }
                       },
-                      "reference" : "a89c67cf-b7e9-4673-a757-2989517b8858",
+                      "reference" : "0fd8d962-dc1f-4d45-9526-b3adfacb2145",
+                      "hasValidationError" : false,
+                      "id" : "pbInput",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Requisitos"
+                        },
+                        "placeholder" : {
+                          "type" : "constant"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "text"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "melhoria.requisitos"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
+                        }
+                      },
+                      "reference" : "58603a77-994d-4ebc-a28f-083144f4bd9e",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -880,7 +1035,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "42594d17-bc8c-4fb2-9868-49ae9f97d9a5",
+                "reference" : "117360d9-553a-4fdc-b2c6-d8a0a566787a",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -932,7 +1087,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "dfe7eaf5-c84f-4090-ba3e-ecb21a777716",
+                "reference" : "157f29fb-4d22-481a-a18c-603aaf21de62",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -986,6 +1141,8 @@
         "\t\t\tdescricaoFazer: $data.melhoria.descricaoFazer !== undefined ? $data.melhoria.descricaoFazer : null,",
         "\t\t\tcomentarioGestor: $data.melhoria.comentarioGestor !== undefined ? $data.melhoria.comentarioGestor : null,",
         "\t\t\taprovacaoGestor: $data.melhoria.aprovacaoGestor !== undefined ? $data.melhoria.aprovacaoGestor : null,",
+        "\t\t\tcomentarioEngenharia: $data.melhoria.comentarioEngenharia !== undefined ? $data.melhoria.comentarioEngenharia : null,",
+        "\t\t\taprovacaoEngenharia: $data.melhoria.aprovacaoEngenharia !== undefined ? $data.melhoria.aprovacaoEngenharia : null,",
         "\t\t\tordemServicoRequisitos: $data.melhoria.ordemServicoRequisitos !== undefined ? $data.melhoria.ordemServicoRequisitos : null,",
         "\t\t\trequisitos: $data.melhoria.requisitos !== undefined ? $data.melhoria.requisitos : null",
         "\t\t}",
@@ -1011,16 +1168,16 @@
   },
   "assets" : [
     {
-      "id" : "9a1a0cc5-b8ac-4b9f-a807-46915c124c9b",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "b160f1a5-0740-4c9c-aabd-0b033f6c388b",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "ed9bbdb2-a613-4daa-b463-4a392ce2c244",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "529de9dd-f4f6-433d-8da7-cde0d1f83fcd",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     }

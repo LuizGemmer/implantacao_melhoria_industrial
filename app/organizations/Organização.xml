@@ -3,6 +3,8 @@
   <customUserInfoDefinitions/>
   <users>
     <user userName="Colaborador">
+      <jobTitle></jobTitle>
+      <manager>Gestor</manager>
       <personalData/>
       <professionalData/>
       <password encrypted="false">1234</password>

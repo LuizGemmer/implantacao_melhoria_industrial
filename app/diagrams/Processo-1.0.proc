@@ -2,7 +2,7 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:connectorconfiguration="http://www.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
   <process:MainProcess xmi:id="_48aygC9-EfCqJOVmptBMqg" name="Processo" bonitaModelVersion="8">
     <elements xmi:type="process:Pool" xmi:id="_48aygS9-EfCqJOVmptBMqg" name="SugestaoMelhoria" displayName="Sugestão Melhoria">
-      <elements xmi:type="process:Lane" xmi:id="_48aygi9-EfCqJOVmptBMqg" name="Colaborador" actor="_SeTI8C-NEfC1UoIdMei-qg">
+      <elements xmi:type="process:Lane" xmi:id="_48aygi9-EfCqJOVmptBMqg" name="Colaborador" actor="_48bZoC9-EfCqJOVmptBMqg">
         <elements xmi:type="process:StartEvent" xmi:id="_48aygy9-EfCqJOVmptBMqg" name="Proposta de melhoria" outgoing="_afCm0DUgEfC2kOjxAoQ4kw">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_48ayhC9-EfCqJOVmptBMqg" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_48ayhS9-EfCqJOVmptBMqg" name="" content="" returnTypeFixed="true"/>
@@ -126,8 +126,8 @@
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_Pr5zdS-FEfC1UoIdMei-qg" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_Pr6agS-FEfC1UoIdMei-qg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_Pr6agC-FEfC1UoIdMei-qg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-          <formMapping xmi:type="process:FormMapping" xmi:id="_P_uuaS-FEfC1UoIdMei-qg">
-            <targetForm xmi:type="expression:Expression" xmi:id="_a83q8DUjEfC2kOjxAoQ4kw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+          <formMapping xmi:type="process:FormMapping" xmi:id="_P_uuaS-FEfC1UoIdMei-qg" type="NONE">
+            <targetForm xmi:type="expression:Expression" xmi:id="_IoMXYDacEfCpDtQ9qE9TEA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_P_uuaC-FEfC1UoIdMei-qg"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_P_uuay-FEfC1UoIdMei-qg" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -743,15 +743,147 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_8M884S-DEfC1UoIdMei-qg" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_8M884C-DEfC1UoIdMei-qg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_8M884i-DEfC1UoIdMei-qg" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_1YT7wDaTEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_1YT7wTaTEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_1YT7wjaTEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_1YT7wzaTEfCfIviS7gC7ZA" name="melhoriaInput.oQueFazer" content="melhoriaInput?.oQueFazer" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_1YT7xDaTEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_1YT7xTaTEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setOQueFazer">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_1YT7xjaTEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_1YT7xzaTEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_1YT7yDaTEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_1YT7yTaTEfCfIviS7gC7ZA" name="melhoriaInput.comoFazer" content="melhoriaInput?.comoFazer" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_1YT7yjaTEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_1YT7yzaTEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setComoFazer">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_1YT7zDaTEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_1YT7zTaTEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_1YT7zjaTEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_1YT7zzaTEfCfIviS7gC7ZA" name="melhoriaInput.ondeFazer" content="melhoriaInput?.ondeFazer" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_1YT70DaTEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_1YT70TaTEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setOndeFazer">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_1YT70jaTEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_1YT70zaTEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_1YT71DaTEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_1YT71TaTEfCfIviS7gC7ZA" name="melhoriaInput.descricaoFazer" content="melhoriaInput?.descricaoFazer" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_1YT71jaTEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_1YT71zaTEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setDescricaoFazer">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_1YT72DaTEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_1YT72TaTEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_1YT72jaTEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_1YT72zaTEfCfIviS7gC7ZA" name="melhoriaInput.comentarioGestor" content="melhoriaInput?.comentarioGestor" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_1YT73DaTEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_1YT73TaTEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setComentarioGestor">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_1YT73jaTEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_1YT73zaTEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_1YT74DaTEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_1YT74TaTEfCfIviS7gC7ZA" name="melhoriaInput.aprovacaoGestor" content="melhoriaInput?.aprovacaoGestor" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_1YT74jaTEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_1YT74zaTEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setAprovacaoGestor">
+              <inputTypes>java.lang.Boolean</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_1YT75DaTEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_1YT75TaTEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_1YT75jaTEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_1YT75zaTEfCfIviS7gC7ZA" name="melhoriaInput.comentarioEngenharia" content="melhoriaInput?.comentarioEngenharia" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_1YT76DaTEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_1YT76TaTEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setComentarioEngenharia">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_1YT76jaTEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_1YT76zaTEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_1YT77DaTEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_1YT77TaTEfCfIviS7gC7ZA" name="melhoriaInput.aprovacaoEngenharia" content="melhoriaInput?.aprovacaoEngenharia" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_1YT77jaTEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_1YT77zaTEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setAprovacaoEngenharia">
+              <inputTypes>java.lang.Boolean</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_1YT78DaTEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_1YT78TaTEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_1YT78jaTEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_1YT78zaTEfCfIviS7gC7ZA" name="melhoriaInput.ordemServicoRequisitos" content="melhoriaInput?.ordemServicoRequisitos" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_1YT79DaTEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_1YT79TaTEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setOrdemServicoRequisitos">
+              <inputTypes>java.lang.Integer</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_1YT79jaTEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_1YT79zaTEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_1YT7-DaTEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_1YT7-TaTEfCfIviS7gC7ZA" name="melhoriaInput.requisitos" content="melhoriaInput?.requisitos" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_1YT7-jaTEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_1YT7-zaTEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setRequisitos">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_8M884y-DEfC1UoIdMei-qg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_8M885C-DEfC1UoIdMei-qg" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_8M885S-DEfC1UoIdMei-qg" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_8M885y-DEfC1UoIdMei-qg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_8M885i-DEfC1UoIdMei-qg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_8sf_qS-DEfC1UoIdMei-qg">
-            <targetForm xmi:type="expression:Expression" xmi:id="_a83q8TUjEfC2kOjxAoQ4kw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_3QK1QDaTEfCfIviS7gC7ZA" name="RequisitosMelhoriaForm" content="de6729e6-a366-44fc-ac72-3bf33f71fb2d" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <contract xmi:type="process:Contract" xmi:id="_8sf_qC-DEfC1UoIdMei-qg"/>
+          <contract xmi:type="process:Contract" xmi:id="_8sf_qC-DEfC1UoIdMei-qg">
+            <inputs xmi:type="process:ContractInput" xmi:id="_1YSGkDaTEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" dataReference="melhoria" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_1YSGkTaTEfCfIviS7gC7ZA" name="oQueFazer" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_1YSGkjaTEfCfIviS7gC7ZA" name="comoFazer" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_1YSGkzaTEfCfIviS7gC7ZA" name="ondeFazer" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_1YSGlDaTEfCfIviS7gC7ZA" name="descricaoFazer" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_1YSGlTaTEfCfIviS7gC7ZA" name="comentarioGestor" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_1YSGljaTEfCfIviS7gC7ZA" name="aprovacaoGestor" type="BOOLEAN" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_1YSGlzaTEfCfIviS7gC7ZA" name="comentarioEngenharia" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_1YSGmDaTEfCfIviS7gC7ZA" name="aprovacaoEngenharia" type="BOOLEAN" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_1YSGmTaTEfCfIviS7gC7ZA" name="ordemServicoRequisitos" type="INTEGER" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_1YSGmjaTEfCfIviS7gC7ZA" name="requisitos" createMode="false"/>
+            </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_1YTUsDaTEfCfIviS7gC7ZA" expression="melhoriaInput?.oQueFazer != null" errorMessage="oQueFazer is mandatory for Melhoria" name="mandatory_melhoriaInput_oQueFazer">
+              <inputNames>melhoriaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_1YTUsTaTEfCfIviS7gC7ZA" expression="melhoriaInput?.comoFazer != null" errorMessage="comoFazer is mandatory for Melhoria" name="mandatory_melhoriaInput_comoFazer">
+              <inputNames>melhoriaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_1YTUsjaTEfCfIviS7gC7ZA" expression="melhoriaInput?.ondeFazer != null" errorMessage="ondeFazer is mandatory for Melhoria" name="mandatory_melhoriaInput_ondeFazer">
+              <inputNames>melhoriaInput</inputNames>
+            </constraints>
+          </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_8sgmsC-DEfC1UoIdMei-qg" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
         <elements xmi:type="process:Task" xmi:id="_HiElkC-FEfC1UoIdMei-qg" name="Implantar Melhoria" outgoing="_5QhLgC-EEfC1UoIdMei-qg" incoming="_y2P2wC-EEfC1UoIdMei-qg" overrideActorsOfTheLane="false">
@@ -775,30 +907,330 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_4XwM8S-DEfC1UoIdMei-qg" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_4XwM8C-DEfC1UoIdMei-qg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_4XwM8i-DEfC1UoIdMei-qg" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_EsoP0DaTEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_EsoP0TaTEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_EsoP0jaTEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_EsoP0zaTEfCfIviS7gC7ZA" name="melhoriaInput.oQueFazer" content="melhoriaInput?.oQueFazer" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_EsoP1DaTEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_EsoP1TaTEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setOQueFazer">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_EsoP1jaTEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_EsoP1zaTEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_EsoP2DaTEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_EsoP2TaTEfCfIviS7gC7ZA" name="melhoriaInput.comoFazer" content="melhoriaInput?.comoFazer" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_EsoP2jaTEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_EsoP2zaTEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setComoFazer">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_EsoP3DaTEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Eso24DaTEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Eso24TaTEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Eso24jaTEfCfIviS7gC7ZA" name="melhoriaInput.ondeFazer" content="melhoriaInput?.ondeFazer" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Eso24zaTEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Eso25DaTEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setOndeFazer">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Eso25TaTEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Eso25jaTEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Eso25zaTEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Eso26DaTEfCfIviS7gC7ZA" name="melhoriaInput.descricaoFazer" content="melhoriaInput?.descricaoFazer" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Eso26TaTEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Eso26jaTEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setDescricaoFazer">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Eso26zaTEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Eso27DaTEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Eso27TaTEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Eso27jaTEfCfIviS7gC7ZA" name="melhoriaInput.comentarioGestor" content="melhoriaInput?.comentarioGestor" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Eso27zaTEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Eso28DaTEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setComentarioGestor">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Eso28TaTEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Eso28jaTEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Eso28zaTEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Eso29DaTEfCfIviS7gC7ZA" name="melhoriaInput.aprovacaoGestor" content="melhoriaInput?.aprovacaoGestor" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Eso29TaTEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Eso29jaTEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setAprovacaoGestor">
+              <inputTypes>java.lang.Boolean</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Eso29zaTEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Eso2-DaTEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Eso2-TaTEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Eso2-jaTEfCfIviS7gC7ZA" name="melhoriaInput.comentarioEngenharia" content="melhoriaInput?.comentarioEngenharia" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Eso2-zaTEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Eso2_DaTEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setComentarioEngenharia">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Eso2_TaTEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Eso2_jaTEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Eso2_zaTEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Eso3ADaTEfCfIviS7gC7ZA" name="melhoriaInput.aprovacaoEngenharia" content="melhoriaInput?.aprovacaoEngenharia" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Eso3ATaTEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Eso3AjaTEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setAprovacaoEngenharia">
+              <inputTypes>java.lang.Boolean</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Eso3AzaTEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Eso3BDaTEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Eso3BTaTEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Eso3BjaTEfCfIviS7gC7ZA" name="melhoriaInput.ordemServicoRequisitos" content="melhoriaInput?.ordemServicoRequisitos" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Eso3BzaTEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Eso3CDaTEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setOrdemServicoRequisitos">
+              <inputTypes>java.lang.Integer</inputTypes>
+            </operator>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_4XwM8y-DEfC1UoIdMei-qg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_4XwM9C-DEfC1UoIdMei-qg" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_4XwM9S-DEfC1UoIdMei-qg" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_4Xw0AC-DEfC1UoIdMei-qg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_4XwM9i-DEfC1UoIdMei-qg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-          <formMapping xmi:type="process:FormMapping" xmi:id="_kV7W-TUhEfC2kOjxAoQ4kw" type="NONE">
-            <targetForm xmi:type="expression:Expression" xmi:id="_kV7W-jUhEfC2kOjxAoQ4kw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+          <formMapping xmi:type="process:FormMapping" xmi:id="_kV7W-TUhEfC2kOjxAoQ4kw">
+            <targetForm xmi:type="expression:Expression" xmi:id="_JZgOoDaTEfCfIviS7gC7ZA" name="OSRequisitosForm" content="186d41b2-df5b-4514-afbd-b64b0fe613aa" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <contract xmi:type="process:Contract" xmi:id="_kV7W-DUhEfC2kOjxAoQ4kw"/>
+          <contract xmi:type="process:Contract" xmi:id="_kV7W-DUhEfC2kOjxAoQ4kw">
+            <inputs xmi:type="process:ContractInput" xmi:id="_Er5QADaTEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" dataReference="melhoria" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_Er5QATaTEfCfIviS7gC7ZA" name="oQueFazer" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_Er5QAjaTEfCfIviS7gC7ZA" name="comoFazer" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_Er5QAzaTEfCfIviS7gC7ZA" name="ondeFazer" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_Er5QBDaTEfCfIviS7gC7ZA" name="descricaoFazer" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_Er5QBTaTEfCfIviS7gC7ZA" name="comentarioGestor" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_Er5QBjaTEfCfIviS7gC7ZA" name="aprovacaoGestor" type="BOOLEAN" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_Er5QBzaTEfCfIviS7gC7ZA" name="comentarioEngenharia" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_Er5QCDaTEfCfIviS7gC7ZA" name="aprovacaoEngenharia" type="BOOLEAN" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_Er5QCTaTEfCfIviS7gC7ZA" name="ordemServicoRequisitos" type="INTEGER" createMode="false"/>
+            </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_EsnBsDaTEfCfIviS7gC7ZA" expression="melhoriaInput?.oQueFazer != null" errorMessage="oQueFazer is mandatory for Melhoria" name="mandatory_melhoriaInput_oQueFazer">
+              <inputNames>melhoriaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_EsnBsTaTEfCfIviS7gC7ZA" expression="melhoriaInput?.comoFazer != null" errorMessage="comoFazer is mandatory for Melhoria" name="mandatory_melhoriaInput_comoFazer">
+              <inputNames>melhoriaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_EsnBsjaTEfCfIviS7gC7ZA" expression="melhoriaInput?.ondeFazer != null" errorMessage="ondeFazer is mandatory for Melhoria" name="mandatory_melhoriaInput_ondeFazer">
+              <inputNames>melhoriaInput</inputNames>
+            </constraints>
+          </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_kV7W-zUhEfC2kOjxAoQ4kw" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
         <elements xmi:type="process:Task" xmi:id="_SS3IMDUjEfC2kOjxAoQ4kw" name="Gerar Ordem de Serviço - Execucao" outgoing="_y2P2wC-EEfC1UoIdMei-qg" incoming="_wZaA4C-EEfC1UoIdMei-qg" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_wZYLsS-EEfC1UoIdMei-qg" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_wZYLsC-EEfC1UoIdMei-qg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_wZYLsi-EEfC1UoIdMei-qg" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_Pca94DaUEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Pca94TaUEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Pca94jaUEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Pca94zaUEfCfIviS7gC7ZA" name="melhoriaInput.oQueFazer" content="melhoriaInput?.oQueFazer" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Pca95DaUEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Pca95TaUEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setOQueFazer">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Pca95jaUEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Pca95zaUEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Pca96DaUEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Pca96TaUEfCfIviS7gC7ZA" name="melhoriaInput.comoFazer" content="melhoriaInput?.comoFazer" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Pca96jaUEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Pca96zaUEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setComoFazer">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Pca97DaUEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Pca97TaUEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Pca97jaUEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Pca97zaUEfCfIviS7gC7ZA" name="melhoriaInput.ondeFazer" content="melhoriaInput?.ondeFazer" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Pca98DaUEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Pca98TaUEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setOndeFazer">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Pca98jaUEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Pca98zaUEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Pca99DaUEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Pca99TaUEfCfIviS7gC7ZA" name="melhoriaInput.descricaoFazer" content="melhoriaInput?.descricaoFazer" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Pca99jaUEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Pca99zaUEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setDescricaoFazer">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Pca9-DaUEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Pca9-TaUEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Pca9-jaUEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Pca9-zaUEfCfIviS7gC7ZA" name="melhoriaInput.comentarioGestor" content="melhoriaInput?.comentarioGestor" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Pca9_DaUEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Pca9_TaUEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setComentarioGestor">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Pca9_jaUEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Pca9_zaUEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Pca-ADaUEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Pca-ATaUEfCfIviS7gC7ZA" name="melhoriaInput.aprovacaoGestor" content="melhoriaInput?.aprovacaoGestor" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Pca-AjaUEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Pca-AzaUEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setAprovacaoGestor">
+              <inputTypes>java.lang.Boolean</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Pca-BDaUEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Pca-BTaUEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Pca-BjaUEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Pca-BzaUEfCfIviS7gC7ZA" name="melhoriaInput.comentarioEngenharia" content="melhoriaInput?.comentarioEngenharia" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Pca-CDaUEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Pca-CTaUEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setComentarioEngenharia">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Pca-CjaUEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Pca-CzaUEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Pca-DDaUEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Pca-DTaUEfCfIviS7gC7ZA" name="melhoriaInput.aprovacaoEngenharia" content="melhoriaInput?.aprovacaoEngenharia" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Pca-DjaUEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Pca-DzaUEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setAprovacaoEngenharia">
+              <inputTypes>java.lang.Boolean</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Pca-EDaUEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Pca-ETaUEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Pca-EjaUEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Pca-EzaUEfCfIviS7gC7ZA" name="melhoriaInput.ordemServicoRequisitos" content="melhoriaInput?.ordemServicoRequisitos" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Pca-FDaUEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Pca-FTaUEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setOrdemServicoRequisitos">
+              <inputTypes>java.lang.Integer</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Pca-FjaUEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Pca-FzaUEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Pca-GDaUEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Pca-GTaUEfCfIviS7gC7ZA" name="melhoriaInput.requisitos" content="melhoriaInput?.requisitos" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Pca-GjaUEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Pca-GzaUEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setRequisitos">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Pca-HDaUEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Pca-HTaUEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Pca-HjaUEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Pca-HzaUEfCfIviS7gC7ZA" name="melhoriaInput.analiseViabilidade" content="melhoriaInput?.analiseViabilidade" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Pca-IDaUEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Pca-ITaUEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setAnaliseViabilidade">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Pca-IjaUEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Pca-IzaUEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Pca-JDaUEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Pca-JTaUEfCfIviS7gC7ZA" name="melhoriaInput.aprovacaoViabilidade" content="melhoriaInput?.aprovacaoViabilidade" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Pca-JjaUEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Pca-JzaUEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setAprovacaoViabilidade">
+              <inputTypes>java.lang.Boolean</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Pca-KDaUEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Pca-KTaUEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Pca-KjaUEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Pca-KzaUEfCfIviS7gC7ZA" name="melhoriaInput.linkDocumentoFormalizado" content="melhoriaInput?.linkDocumentoFormalizado" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Pca-LDaUEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Pca-LTaUEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setLinkDocumentoFormalizado">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_Pca-LjaUEfCfIviS7gC7ZA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Pca-LzaUEfCfIviS7gC7ZA" name="melhoria" content="melhoria" type="TYPE_VARIABLE" returnType="com.company.model.Melhoria">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Pca-MDaUEfCfIviS7gC7ZA" name="melhoria" dataType="_48bZuS9-EfCqJOVmptBMqg" className="com.company.model.Melhoria"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Pca-MTaUEfCfIviS7gC7ZA" name="melhoriaInput.ordemServicoExecucao" content="melhoriaInput?.ordemServicoExecucao" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_Pca-MjaUEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_Pca-MzaUEfCfIviS7gC7ZA" type="JAVA_METHOD" expression="setOrdemServicoExecucao">
+              <inputTypes>java.lang.Integer</inputTypes>
+            </operator>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_wZYLsy-EEfC1UoIdMei-qg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_wZYLtC-EEfC1UoIdMei-qg" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_wZYLtS-EEfC1UoIdMei-qg" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_wZYLty-EEfC1UoIdMei-qg" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_wZYLti-EEfC1UoIdMei-qg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-          <formMapping xmi:type="process:FormMapping" xmi:id="_SS4WVTUjEfC2kOjxAoQ4kw" type="NONE">
-            <targetForm xmi:type="expression:Expression" xmi:id="_SS4WVjUjEfC2kOjxAoQ4kw" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+          <formMapping xmi:type="process:FormMapping" xmi:id="_SS4WVTUjEfC2kOjxAoQ4kw">
+            <targetForm xmi:type="expression:Expression" xmi:id="_Ys2AYDaUEfCfIviS7gC7ZA" name="OSExecucaoForm" content="14258a30-085a-4e9b-b3ab-16d5693da4a8" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <contract xmi:type="process:Contract" xmi:id="_SS4WVDUjEfC2kOjxAoQ4kw"/>
+          <contract xmi:type="process:Contract" xmi:id="_SS4WVDUjEfC2kOjxAoQ4kw">
+            <inputs xmi:type="process:ContractInput" xmi:id="_PcZIsDaUEfCfIviS7gC7ZA" name="melhoriaInput" type="COMPLEX" dataReference="melhoria" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_PcZIsTaUEfCfIviS7gC7ZA" name="oQueFazer" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_PcZvwDaUEfCfIviS7gC7ZA" name="comoFazer" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_PcZvwTaUEfCfIviS7gC7ZA" name="ondeFazer" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_PcZvwjaUEfCfIviS7gC7ZA" name="descricaoFazer" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_PcZvwzaUEfCfIviS7gC7ZA" name="comentarioGestor" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_PcZvxDaUEfCfIviS7gC7ZA" name="aprovacaoGestor" type="BOOLEAN" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_PcZvxTaUEfCfIviS7gC7ZA" name="comentarioEngenharia" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_PcZvxjaUEfCfIviS7gC7ZA" name="aprovacaoEngenharia" type="BOOLEAN" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_PcZvxzaUEfCfIviS7gC7ZA" name="ordemServicoRequisitos" type="INTEGER" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_PcZvyDaUEfCfIviS7gC7ZA" name="requisitos" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_PcZvyTaUEfCfIviS7gC7ZA" name="analiseViabilidade" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_PcZvyjaUEfCfIviS7gC7ZA" name="aprovacaoViabilidade" type="BOOLEAN" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_PcZvyzaUEfCfIviS7gC7ZA" name="linkDocumentoFormalizado" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_PcZvzDaUEfCfIviS7gC7ZA" name="ordemServicoExecucao" type="INTEGER" createMode="false"/>
+            </inputs>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_PcZvzTaUEfCfIviS7gC7ZA" expression="melhoriaInput?.oQueFazer != null" errorMessage="oQueFazer is mandatory for Melhoria" name="mandatory_melhoriaInput_oQueFazer">
+              <inputNames>melhoriaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_PcZvzjaUEfCfIviS7gC7ZA" expression="melhoriaInput?.comoFazer != null" errorMessage="comoFazer is mandatory for Melhoria" name="mandatory_melhoriaInput_comoFazer">
+              <inputNames>melhoriaInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_PcZvzzaUEfCfIviS7gC7ZA" expression="melhoriaInput?.ondeFazer != null" errorMessage="ondeFazer is mandatory for Melhoria" name="mandatory_melhoriaInput_ondeFazer">
+              <inputNames>melhoriaInput</inputNames>
+            </constraints>
+          </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_SS4WVzUjEfC2kOjxAoQ4kw" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
       </elements>

@@ -41,11 +41,10 @@
       <customUserInfoValues/>
     </user>
     <user userName="walter.bates">
-      <firstName>Walter</firstName>
-      <lastName>Bates</lastName>
+      <manager>Gestor</manager>
       <personalData/>
       <professionalData/>
-      <password encrypted="false">bpm</password>
+      <password encrypted="false">1234</password>
       <customUserInfoValues/>
     </user>
   </users>
@@ -127,28 +126,8 @@
     </membership>
     <membership>
       <userName>walter.bates</userName>
-      <roleName>Admin</roleName>
+      <roleName>User</roleName>
       <groupName>Colaborador</groupName>
-    </membership>
-    <membership>
-      <userName>walter.bates</userName>
-      <roleName>Admin</roleName>
-      <groupName>Gestor</groupName>
-    </membership>
-    <membership>
-      <userName>walter.bates</userName>
-      <roleName>Admin</roleName>
-      <groupName>Engenharia</groupName>
-    </membership>
-    <membership>
-      <userName>walter.bates</userName>
-      <roleName>Admin</roleName>
-      <groupName>Manutencao</groupName>
-    </membership>
-    <membership>
-      <userName>walter.bates</userName>
-      <roleName>Admin</roleName>
-      <groupName>PCM</groupName>
     </membership>
   </memberships>
 </organization:Organization>

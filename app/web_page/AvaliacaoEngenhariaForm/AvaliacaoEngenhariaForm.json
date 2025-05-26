@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "49624c2a-a4df-4f03-ad43-3ed1f2104546",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1747704746138,
+  "lastUpdate" : 1748203643296,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -42,7 +42,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "Avaliação Melhoria (Engenharia)"
+                  "value" : "Avaliação da melhoria (Engenharia)"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -110,7 +110,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Melhoria"
+                    "value" : "Dados da melhoria:"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -119,6 +119,10 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
                   }
                 },
                 "reference" : "ba9b07d5-6665-4d66-9824-c805d6770c3e",
@@ -193,7 +197,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "O Que Fazer"
+                          "value" : "O que a melhoria irá fazer?"
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -283,7 +287,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Como Fazer"
+                          "value" : "Como a melhoria deve ser feita?"
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -373,7 +377,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Onde Fazer"
+                          "value" : "Onde será feita essa melhoria?"
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -463,7 +467,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Descricao Fazer"
+                          "value" : "O campo abaixo é livre para escrever mais informações sobre a melhoria."
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -553,7 +557,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Comentario Gestor"
+                          "value" : "Comentário do gestor sobre a melhoria."
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -635,7 +639,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Aprovacao Gestor"
+                          "value" : "Aprovado pelo gestor?"
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -696,7 +700,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Comentario Engenharia"
+                          "value" : "Comentário da engenharia sobre a melhoria"
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -716,6 +720,32 @@
                         "required" : {
                           "type" : "constant",
                           "value" : false
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "debounce" : {
+                          "type" : "constant",
+                          "value" : 0
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
                         }
                       },
                       "reference" : "cd5089b4-0f95-40c2-a33d-769ea0cbf2bd",
@@ -752,7 +782,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Aprovacao Engenharia"
+                          "value" : "Aprovado pela engenharia?"
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -761,6 +791,14 @@
                         "value" : {
                           "type" : "variable",
                           "value" : "melhoria.aprovacaoEngenharia"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
                         }
                       },
                       "reference" : "ab84f97b-1798-4d5e-a7ed-08cf88fd724b",

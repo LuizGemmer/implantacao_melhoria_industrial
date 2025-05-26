@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "c9218921-34b9-41ee-a8d1-18108d855324",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1747596921100,
+  "lastUpdate" : 1748206695968,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -110,7 +110,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Ganhos"
+                    "value" : "Dados da melhoria:"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -197,7 +197,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Link Documento Formalizado"
+                          "value" : "Link do documento formalizado"
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -287,7 +287,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Ordem Servico Execucao"
+                          "value" : "Código da ordem de serviço de execução gerada."
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -377,7 +377,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Analise Ganhos"
+                          "value" : "Analise do ganhos gerados."
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -467,7 +467,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Ganhos Anuais Com Melhoria"
+                          "value" : "Analise dos ganhos anuais com a implantação da melhoria."
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -487,6 +487,32 @@
                         "required" : {
                           "type" : "constant",
                           "value" : false
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "debounce" : {
+                          "type" : "constant",
+                          "value" : 0
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
                         }
                       },
                       "reference" : "c288aaab-9542-466b-8411-6b3eac33d056",
@@ -523,7 +549,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Ganhos Aprovados"
+                          "value" : "Os ganhos foram comprovados?"
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -532,6 +558,14 @@
                         "value" : {
                           "type" : "variable",
                           "value" : "melhoria.ganhosAprovados"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
                         }
                       },
                       "reference" : "ed49cb3f-7553-4cb8-bd28-3bfeaeec1d6b",

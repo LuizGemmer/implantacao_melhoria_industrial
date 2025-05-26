@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "187a10bb-b802-4e13-b8bf-876af39f9aa4",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1747704972834,
+  "lastUpdate" : 1748205720250,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -42,7 +42,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "Avaliar Requisitos"
+                  "value" : "Avaliação de requisitos"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -72,7 +72,16 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
         "reference" : "1236ea87-779e-434e-951f-53abeb1a2e5c",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
@@ -110,7 +119,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Melhoria"
+                    "value" : "Dados da melhoria:"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -119,6 +128,10 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
                   }
                 },
                 "reference" : "ab25928d-6198-4060-8b7d-3a1d336e8074",
@@ -193,7 +206,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "O Que Fazer"
+                          "value" : "O que a melhoria irá fazer?"
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -283,7 +296,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Como Fazer"
+                          "value" : "Como a melhoria deve ser feita?"
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -373,7 +386,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Onde Fazer"
+                          "value" : "Onde será feita essa melhoria?"
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -463,7 +476,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Descricao Fazer"
+                          "value" : "O campo abaixo é livre para escrever mais informações sobre a melhoria."
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -553,7 +566,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Comentario Gestor"
+                          "value" : "Comentário do gestor sobre a melhoria."
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -635,7 +648,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Aprovacao Gestor"
+                          "value" : "Aprovado pelo gestor?"
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -696,7 +709,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Comentario Engenharia"
+                          "value" : "Comentário da engenharia sobre a melhoria"
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -778,7 +791,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Aprovacao Engenharia"
+                          "value" : "Aprovado pela engenharia?"
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -839,7 +852,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Ordem Servico Requisitos"
+                          "value" : "Código da ordem de serviço gerada."
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -929,7 +942,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Requisitos"
+                          "value" : "Requisitos da melhoria:"
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -949,6 +962,32 @@
                         "required" : {
                           "type" : "constant",
                           "value" : false
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "debounce" : {
+                          "type" : "constant",
+                          "value" : 0
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
                         }
                       },
                       "reference" : "58603a77-994d-4ebc-a28f-083144f4bd9e",
@@ -987,7 +1026,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Submit"
+                    "value" : "Salvar requisitos"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -1033,6 +1072,27 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
                 "reference" : "117360d9-553a-4fdc-b2c6-d8a0a566787a",
@@ -1085,6 +1145,14 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
                   }
                 },
                 "reference" : "157f29fb-4d22-481a-a18c-603aaf21de62",
